@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+#home{
+    background: linear-gradient(100deg, #c4c4c4 50%, #000000 50%);
+    height: 100dvh;
+    width: 100dvw;
+    padding: 3rem 9rem;
+    overflow: hidden;
+}
+
+#nav{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo a img {
+        width: 4rem;
+    }
+    #nav-links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        li{
+            list-style: none;
+            a{
+                color: #d7d7d7;
+                text-decoration: none;
+            }
+        }
+
+        #nav-contact-btn{
+            padding: 0.3rem 0.7rem;
+            background: #d7d7d7;
+            color: #000000;
+            border-radius: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+#desc{
+    display: flex;
+    justify-content: space-between;
+    .text{
+        margin-top: 20%;
+        h3{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1{
+            font-family: 'Space Grotesk', sans-serif;
+            /* text-transform: uppercase; */
+            font-size: 3rem;
+        }
+        h4{
+            margin-top: -0.4rem;
+            font-size: 1.3rem;
+            color: #555555;
+        }
+    }
+}
