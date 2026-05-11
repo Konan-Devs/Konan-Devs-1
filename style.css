@@ -221,12 +221,12 @@ body{
     }
 }
 #skills{
-    height: 200dvh;
+    height: 180dvh;
     background: #d7d7d7;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 3rem;
     padding: 5rem 20rem;
     .head{
@@ -235,6 +235,7 @@ body{
         font-size: 3rem;
         font-family: 'Space Grotesk', sans-serif;
         padding: 0.4rem 2rem;
+        margin-bottom: 1rem;
     }
     .using-now{
         display: flex;
