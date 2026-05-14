@@ -151,7 +151,55 @@
         </div>
 
         <img src="/resources/images/separatorBlack 1.png" alt="seperator" class="seperator">
+
+        <form action="https://formspree.io/f/xpqbgdbv" method="POST" id="contact-form">
+            <input type="text" name="Name" id="name" placeholder="enter your name*" required>
+            <input type="email" name="Email" id="email" placeholder="enter your email*" required>
+            <input type="number" name="Phone" id="phone" placeholder="enter your phone number">
+            <textarea name="Message" id="message" placeholder="your message*" required></textarea>
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
     </section>
+
+    <footer>
+        <div id="back-to-top">
+            <img src="/resources/images/back-to-top.png" alt="Back to Top">
+            <h1>back to top</h1>
+        </div>
+
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-solid fa-at"></i></a>
+        </div>
+
+        <div class="copyright">
+            <p><b>&copy; 2024 Konan-Devs</b> All rights reserved.</p>     
+        </div>
+    </footer>
+
+
+    <script>
+        const backTOTopBtn = document.getElementById('back-to-top');
+        backTOTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const form = document.getElementById("contact-form");
+            form.addEventListener("submit", () => {
+                setTimeout(() => {
+                form.reset();
+                }, 600);
+        });
+
+
+        
+    </script>
     
 </body>
 </html>
