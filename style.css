@@ -305,6 +305,45 @@ body{
     
 }
 
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 5% 10%;
+    background: #000;
+    h1{
+        text-transform: uppercase;
+        border: 0.3rem solid #d7d7d7;
+        font-size: 3rem;
+        font-family: 'Space Grotesk', sans-serif;
+        padding: 0.4rem 2rem;
+        margin-bottom: 1rem;
+        color: #d7d7d7;
+    }
+    .portfolio-items{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 2rem;
+        a{
+            width: 100%;
+            /* border: 0.3rem solid #000; */
+            border-radius: 0.5rem;
+            /* box-shadow: 0.5rem 0.3rem 0.5rem rgba(255, 255, 255, 0.3); */
+            img{
+                width: 100%;
+                height: 100%;
+                transition: scale 0.3s ease-in-out;
+            }
+        }
+        a:hover img{
+            scale: 105%;
+        }
+    }
+}
+
 #contact{
     height: 120dvh;
     display: flex;
@@ -398,6 +437,7 @@ footer{
     justify-content: space-between;
     gap: 2rem;
     color: #d7d7d7;
+    position: relative;
     #back-to-top{
         display: flex;
         flex-direction: column;
@@ -426,5 +466,12 @@ footer{
         b{
             font-size: 1rem;
         }
+    }
+    .logo{
+        position: absolute;
+        right: 8rem;
+        top: 6rem;
+        width: 6rem;
+        transform: rotate(30deg);
     }
 }
