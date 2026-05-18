@@ -32,6 +32,34 @@
                 <img src="/resources/images/picture.jpg" alt="Konan">
             </div>
         </div>
+
+        <div id="mobile-nav">
+            <div class="top">
+                <img src="/resources/images/darklogo.png" alt="logo">
+
+                <i class="fa-solid fa-bars" id="nav-toggle"></i>
+            </div>
+
+                <ul id="mobile-nav-links">
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li id="nav-contact-btn"><a href="#contact" >Contact Me</a></li>
+                </ul>
+
+        </div>
+
+        <div class="mobile-desc">
+            <p>my name is Konan</p>
+            <h1>i'm a developer</h1>
+            <img src="/resources/images/separatorWhite 3.png" alt="seperator">
+            <div class="socials-mobile">
+                <a href="mailto:konandevs@gmail.com"><i class="fa-solid fa-at"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Konan-Devs"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/+2348024387572" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
         
     </section>
 
@@ -53,7 +81,7 @@
             <h1>about me</h1>
             <p>My name is Chukwuebuka Omogo. I am a second-year Mechanical Engineering student at Federal University of Technology, Minna in Niger State, Nigeria, where I am building a strong foundation in engineering and problem-solving. <br><br>Alongside my studies, I am a passionate front-end web developer focused on creating clean, responsive user interfaces. I am also deeply interested in football, which keeps me active, disciplined, and driven both on and off the field.</p>
 
-            <button><a href="#">more</a></button>
+            <button><a href="#">explore</a></button>
         </div>
 
         <img src="/resources/images/separatorBlack 1.png" alt="seperator" class="seperator">
@@ -194,7 +222,7 @@
             <a href="https://wa.me/+2348024387572" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://twitter.com/konan_devs" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://instagram.com/only_konan_" target="_blank"><i class="fa-brands fa-instagram"></i></a>  
-            <!-- <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             <a href="mailto:konandevs@gmail.com"><i class="fa-solid fa-at"></i></a>
         </div>
 
@@ -222,8 +250,36 @@
                 }, 600);
         });
 
+        const mobileNavToggle = document.getElementById('nav-toggle');
+        const mobileNavLinks = document.getElementById('mobile-nav-links');
+        const mobileDesc = document.querySelector('.mobile-desc');
+        mobileNavLinks.style.transition = 'opacity 0.3s ease, max-height 0.3s ease';
+        mobileNavLinks.style.overflow = 'hidden';
+        mobileNavLinks.style.maxHeight = '0';
+        mobileNavLinks.style.opacity = '0';
 
-        
+        mobileNavToggle.addEventListener('click', () => {
+            if (mobileNavLinks.style.maxHeight === '0px' || mobileNavLinks.style.maxHeight === '0') {
+                mobileNavLinks.style.display = 'flex';
+                requestAnimationFrame(() => {
+                    mobileNavLinks.style.maxHeight = '300px';
+                    mobileNavLinks.style.opacity = '1';
+                });
+                mobileNavToggle.classList.remove('fa-bars');
+                mobileNavToggle.classList.add('fa-xmark');
+                mobileDesc.style.top = '0%';
+            } else {
+                mobileNavLinks.style.maxHeight = '0';
+                mobileNavLinks.style.opacity = '0';
+                setTimeout(() => {
+                    mobileNavLinks.style.display = 'none';
+                }, 300);
+                mobileNavToggle.classList.add('fa-bars');
+                mobileNavToggle.classList.remove('fa-xmark');
+                mobileDesc.style.top = '30%';
+            }
+        });
+
     </script>
     
 </body>
